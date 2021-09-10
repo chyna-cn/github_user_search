@@ -2,11 +2,8 @@ body{
     background-color: #151c2f;
     color:white;
 }
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-@media only screen and (max-width: 600px) {
+
+/*@media only screen and (max-width: 600px) {
     header {
         display: flex;
         justify-content: space-around;
@@ -79,6 +76,7 @@ body{
         width:135%;
         color: white;
         font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.03rem;
 
     }
 
@@ -93,6 +91,97 @@ body{
         border-radius: 10px;
     }
 }
+
+@media only screen and (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        color: white;
+    }
+
+    #left {
+        font-size: 0.6rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: -21%;
+        margin-top: 4%;
+        letter-spacing: 0.08em;
+        line-height: 1em;
+    }
+
+    #right {
+        font-size: 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.3em;
+        margin-right: -50%;
+        margin-top: 6%;
+    }
+    #lbtn{
+        margin-top: 5.5%;
+        margin-right: -18%;
+    }
+
+
+    #search_bar {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 7vh;
+        color: white;
+        border: 1px solid #1f2b48;
+        background-color: #1f2b48;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 10px;
+        outline: none;
+        margin-top: 7%;
+        letter-spacing: 0.03em;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    #enter_search {
+        margin-top: 14px;
+        margin-left: 12px;
+        font-size: 1em;
+        color: #0177fe;
+    }
+
+    label {
+        margin-top: 2px;
+        margin-left: 7px;
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    #search {
+        height: 5vh;
+        background-color: #0177fe;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        margin-left: -45%;
+        font-size: 0.8em;
+        margin-top: 6px;
+        width:135%;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.03rem;
+
+    }
+
+    section {
+        border: 1px solid #1f2b48;
+        height: 80vh;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        background-color: #1f2b48;
+        margin-top: 4%;
+        border-radius: 10px;
+    }
+}*/
 @media only screen and (min-width: 768px) {
         header{
             display: flex;
@@ -161,6 +250,7 @@ body{
         width:160%;
         color: white;
         font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.03rem;
     }
     section {
         border: 1px solid #1f2b48;
@@ -228,6 +318,7 @@ body{
             font-size: 1rem;
         }
         #search{
+            display: inline-block;
             height: 5vh;
             background-color: #0177fe;
             outline: none;
@@ -239,6 +330,7 @@ body{
             width:160%;
             color: white;
             font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.03rem;
         }
         section {
             border: 1px solid #1f2b48;
@@ -319,6 +411,8 @@ body{
         width:160%;
         color: white;
         font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.03rem;
+
     }
     section {
         border: 1px solid #1f2b48;
@@ -331,4 +425,4 @@ body{
         border-radius: 10px;
     }
 }
-
+*/
