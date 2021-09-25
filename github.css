@@ -1,5 +1,3 @@
-
-
 body {
     background-color: #151c2f;
     color: white;
@@ -10,24 +8,17 @@ body {
     color: black;
 }
 
-::placeholder {
-    text-indent: 1%;
-    font-size: 1.3rem;
-    color: white;
-    font-family: FontAwesome;
-}
-
 input:focus::placeholder {
     color: transparent;
 }
-
 @media only screen and (max-width: 600px) {
     header {
         display: flex;
         justify-content: space-around;
         color: white;
+        box-sizing: border-box;
+        margin-top: 4%;
     }
-
     #left {
         font-size: 0.6rem;
         font-family: 'Montserrat', sans-serif;
@@ -49,50 +40,54 @@ input:focus::placeholder {
         margin-top: 5.5%;
         margin-right: -40px;
     }
-
+    #bar{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid #1f2b48;
+        background-color: #1f2b48;
+        width: 90%;
+        border-radius:7px;
+        margin-right: auto;
+        margin-left: auto;
+        height:9vh;
+        margin-top: 7%;
+        padding: 2%;
+    }
+    ::placeholder {
+        text-indent: 0.5%;
+        font-size: 0.9rem;
+        color: white;
+        font-family: FontAwesome;
+    }
 
     #search_bar {
         box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
+        padding-left: 5%;
         height: 7vh;
-        color: white;
-        border: 1px solid #1f2b48;
-        background-color: #1f2b48;
+        border:none;
         margin-right: auto;
         margin-left: auto;
-        border-radius: 10px;
         outline: none;
-        margin-top: 7%;
         letter-spacing: 0.03em;
+        font-size: 1rem;
         font-family: 'Montserrat', sans-serif;
-
+       background-color: #1f2b48;
     }
-
-    #enter_search {
-        margin-top: 14px;
-        margin-left: 12px;
-        font-size: 1em;
-        color: #0177fe;
-    }
-
     #search {
         height: 5vh;
-        background-color: #0177fe;
-        outline: none;
         border: none;
-        border-radius: 4px;
-        margin-left: -45%;
-        font-size: 0.8em;
-        margin-top: 6px;
-        width: 135%;
+        outline: none;
+        font-size: 1em;
+        margin-top: auto;
+        margin-bottom: auto;
+        background-color: #0177fe;
         color: white;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.03rem;
-
+        border-radius: 4px;
     }
-
     section {
         border: 1px solid #1f2b48;
         height: 80vh;
@@ -101,10 +96,9 @@ input:focus::placeholder {
         width: 90%;
         background-color: #1f2b48;
         margin-top: 4%;
-        border-radius: 10px;
+        border-radius: 7px;
     }
 }
-
 @media only screen and (min-width: 600px) {
     header {
         display: flex;
@@ -133,58 +127,56 @@ input:focus::placeholder {
         margin-top: 5.5%;
         margin-right: -18%;
     }
-
-
-    #search_bar {
+    #bar{
         box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
-        width: 90%;
-        height: 7vh;
-        color: white;
+        flex-direction: row;
+        justify-content: space-around;
         border: 1px solid #1f2b48;
         background-color: #1f2b48;
+        width: 90%;
+        border-radius:7px;
         margin-right: auto;
         margin-left: auto;
-        border-radius: 10px;
+        height:9vh;
+        margin-top: 4%;
+    }
+    ::placeholder {
+        font-size: 1.7rem;
+        color: white;
+        font-family: FontAwesome;
+    }
+    #search_bar{
+        width:90%;
+        box-sizing: border-box;
+        height: 7vh;
+        border:none;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top:1%;
         outline: none;
-        margin-top: 7%;
         letter-spacing: 0.03em;
-        font-family: 'Montserrat', sans-serif;
-
-    }
-
-    #enter_search {
-        margin-top: 14px;
-        margin-left: 12px;
-        font-size: 1em;
-        color: #0177fe;
-    }
-
-    label {
-        margin-top: 2px;
-        margin-left: 7px;
         font-size: 1rem;
         font-family: 'Montserrat', sans-serif;
-
+        background-color: #1f2b48;
+        padding: 1%;
     }
-
-    #search {
-        height: 5vh;
-        background-color: #0177fe;
-        outline: none;
+    #search{
+        height: 7vh;
         border: none;
-        border-radius: 4px;
-        margin-left: -45%;
-        font-size: 0.8em;
-        margin-top: 6px;
-        width: 135%;
+        outline: none;
+        font-size: 1em;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 1%;
+        background-color: #0177fe;
         color: white;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.03rem;
+        border-radius: 4px;
+        padding: 3%;
 
     }
-
     section {
         border: 1px solid #1f2b48;
         height: 80vh;
@@ -193,22 +185,22 @@ input:focus::placeholder {
         width: 90%;
         background-color: #1f2b48;
         margin-top: 4%;
-        border-radius: 10px;
+        border-radius: 7px;
     }
-}
 
+}
 @media only screen and (min-width: 768px) {
     header {
         display: flex;
         justify-content: space-around;
         color: white;
-        margin-top: 6%;
+        margin-top: 3%;
     }
 
     #left {
         font-size: 0.6rem;
         font-family: 'Montserrat', sans-serif;
-        margin-left: -19%;
+        margin-left: -23%;
         margin-top: 4%;
         letter-spacing: 0.2em;
         line-height: 1em;
@@ -224,84 +216,83 @@ input:focus::placeholder {
 
     #lbtn {
         margin-top: 5%;
-        margin-right: -19%;
+        margin-right: -22%;
     }
-
-    #search_bar {
+    #bar{
         box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
-        width: 83%;
-        height: 7vh;
-        color: white;
+        flex-direction: row;
+        justify-content: space-around;
         border: 1px solid #1f2b48;
         background-color: #1f2b48;
+        width: 90%;
+        border-radius:9px;
         margin-right: auto;
         margin-left: auto;
-        border-radius: 7px;
-        outline: none;
-        margin-top: 5%;
-        letter-spacing: 0.03em;
-        font-family: 'Montserrat', sans-serif;
-
+        height:8vh;
+        margin-top: 4%;
     }
-
-    #enter_search {
-        margin-top: 27px;
-        margin-left: 17px;
-        font-size: 1.1em;
-        color: #0177fe;
+    ::placeholder {
+        text-indent: 2%;
+        font-size: 1.7rem;
+        color: white;
+        font-family: FontAwesome;
     }
-
-    label {
-        margin-top: 3px;
-        margin-left: 10px;
-        font-size: 0.9rem;
-    }
-
-    #search {
-        position: absolute;
-        top: 22.9%;
-        right: 9%;
-        display: inline-block;
+    #search_bar{
+        width:90%;
+        box-sizing: border-box;
         height: 5vh;
-        background-color: #0177fe;
+        border:none;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0.4%;
         outline: none;
+        letter-spacing: 0.03em;
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #1f2b48;
+        padding-top: 4%;
+        padding-left: 4%;
+    }
+    #search{
+        box-sizing: border-box;
+        height: 4vh;
         border: none;
-        border-radius: 4px;
-        margin-left: -70%;
+        outline: none;
         font-size: 1em;
-        margin-top: 9px;
-        width: 160%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0.8%;
+        background-color: #0177fe;
         color: white;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.03rem;
-    }
+        border-radius: 4px;
+        padding: 2.5%;
 
+    }
     section {
         border: 1px solid #1f2b48;
         height: 80vh;
         margin-right: auto;
         margin-left: auto;
-        width: 83%;
+        width: 90%;
         background-color: #1f2b48;
         margin-top: 4%;
-        border-radius: 10px;
+        border-radius: 9px;
     }
 }
-
 @media only screen and (min-width: 992px) {
     header {
         display: flex;
         justify-content: space-around;
         color: white;
-        margin-top: 5%;
+        margin-top: 1%;
     }
-
     #left {
         font-size: 0.6rem;
         font-family: 'Montserrat', sans-serif;
-        margin-left: -19%;
+        margin-left: -26%;
         margin-top: 6%;
         letter-spacing: 0.2em;
         line-height: 1em;
@@ -311,158 +302,168 @@ input:focus::placeholder {
         font-size: 0.7rem;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.3em;
-        margin-right: -55%;
+        margin-right: -61%;
         margin-top: 7%;
     }
 
     #lbtn {
         margin-top: 7%;
-        margin-right: -19%;
+        margin-right: -24%;
     }
-#bar{
-    display: flex;
-    flex-direction: row;
-    border: 1px solid #1f2b48;
-    background-color: #1f2b48;
-    width: 83%;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 7px;
-    height:9vh;
 
-}
-    #search_bar {
+    #bar{
         box-sizing: border-box;
-        padding-left: 5%;
-        height: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid #1f2b48;
+        background-color: #1f2b48;
+        width: 90%;
+        border-radius:9px;
+        margin-right: auto;
+        margin-left: auto;
+        height:10vh;
+        margin-top: 2%;
+    }
+    ::placeholder {
+        text-indent: 2%;
+        font-size: 1.7rem;
+        color: white;
+        font-family: FontAwesome;
+    }
+    #search_bar{
+        width:90%;
+        box-sizing: border-box;
+        height: 5vh;
         border:none;
         margin-right: auto;
         margin-left: auto;
-        border-radius: 7px;
-        margin-top: 2%;
+        margin-top: 0.4%;
         outline: none;
         letter-spacing: 0.03em;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-family: 'Montserrat', sans-serif;
+        background-color: #1f2b48;
+        padding-top: 3%;
+        padding-left: 4%;
+        color:white;
     }
-
-    #search {
-        display: inline-block;
-        height: 5vh;
-        background-color: #0177fe;
+    #search{
+        box-sizing: border-box;
+        height: 3vh;
+        border: none;
         outline: none;
-        border-radius: 5px;
-        margin-left: -70%;
         font-size: 1em;
-        margin-top: -0.005%;
-        width: 7%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0.5%;
+        background-color: #0177fe;
         color: white;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.03rem;
+        border-radius: 4px;
+        padding: 2%;
     }
     section {
         border: 1px solid #1f2b48;
         height: 80vh;
         margin-right: auto;
         margin-left: auto;
-        width: 83%;
+        width: 90%;
         background-color: #1f2b48;
-        margin-top: 4%;
-        border-radius: 10px;
+        margin-top: 2%;
+        border-radius: 9px;
     }
 }
-
-/*@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     header {
         display: flex;
         justify-content: space-around;
         color: white;
-        margin-top: 6%;
+        margin-top: 2%;
     }
 
     #left {
         font-size: 0.6rem;
         font-family: 'Montserrat', sans-serif;
-        margin-left: -19%;
-        margin-top: 4%;
+        margin-left: -27%;
+        margin-top: 6%;
         letter-spacing: 0.2em;
         line-height: 1em;
     }
-
     #right {
         font-size: 0.7rem;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.3em;
-        margin-right: -55%;
-        margin-top: 5%;
+        margin-right: -63%;
+        margin-top: 7%;
     }
 
     #lbtn {
-        margin-top: 5%;
-        margin-right: -19%;
+        margin-top: 7%;
+        margin-right: -24%;
     }
 
-    #search_bar {
+    #bar{
         box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
-        width: 83%;
-        height: 5vh;
-        color: white;
+        flex-direction: row;
+        justify-content: space-around;
         border: 1px solid #1f2b48;
         background-color: #1f2b48;
+        width: 90%;
+        border-radius:9px;
         margin-right: auto;
         margin-left: auto;
-        border-radius: 7px;
+        height:5vh;
+        margin-top: 2%;
+    }
+    ::placeholder {
+        text-indent: 2%;
+        font-size: 1.7rem;
+        color: white;
+        font-family: FontAwesome;
+    }
+    #search_bar{
+        width:90%;
+        box-sizing: border-box;
+        height: 4vh;
+        border:none;
+        margin-right: auto;
+        margin-left: auto;
         outline: none;
-        margin-top: 5%;
         letter-spacing: 0.03em;
+        font-size: 1rem;
         font-family: 'Montserrat', sans-serif;
-
+        background-color: #1f2b48;
+        padding-top: 3%;
+        padding-left: 4%;
+        color:white;
     }
-
-    #enter_search {
-        margin-top: 45px;
-        margin-left: 20px;
-        font-size: 1.8em;
-        color: #0177fe;
-    }
-
-    label {
-        margin-top: -200px;
-        margin-left: 10px;
-        font-size: 1.5rem;
-    }
-
-    #search {
-        position: absolute;
-        top: 13.7%;
-        right: 9%;
-        display: inline-block;
-        height: 3vh;
-        background-color: #0177fe;
-        outline: none;
+    #search{
+        box-sizing: border-box;
+        height: 4vh;
         border: none;
-        border-radius: 5px;
-        margin-left: -70%;
+        outline: none;
         font-size: 1em;
-        margin-top: 14px;
-        width: 7%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0.5%;
+        background-color: #0177fe;
         color: white;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 0.03rem;
-
+        border-radius: 4px;
+        padding: 2%;
     }
-
     section {
         border: 1px solid #1f2b48;
         height: 80vh;
         margin-right: auto;
         margin-left: auto;
-        width: 83%;
+        width: 90%;
         background-color: #1f2b48;
-        margin-top: 4%;
-        border-radius: 10px;
+        margin-top: 2%;
+        border-radius: 9px;
     }
 }
-
