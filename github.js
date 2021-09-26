@@ -21,15 +21,21 @@ function fetchResults(e) {
         alert("please enter a username");
         return;
     }
-    fetch(url).then(res=> res.json()).then(res=>{
-        console.log(res);
-        displayResults(res);
+    console.log('start')
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/vnd.github.v3+json'
+        },
+    }).then((response)=>{
+        response.json().then((d)=>{
+            console.log(d)
+        })
     });
+    console.log('end')
 }
-function displayResults(res){
+fetchResults(e);
 
-
-}
 
 
 
