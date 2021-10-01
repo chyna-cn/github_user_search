@@ -5,24 +5,29 @@ let mode = () => {
 }
 light.addEventListener('click', mode);
 
-
+let search = document.getElementById('search');
 let username = document.getElementById('search_bar');
 let name = username.value;
 let url = `https://api.github.com/users/?q=${name}`
 
-function submitSearch(e) {
-    fetchResults(e);
-}
-
-function fetchResults(e) {
+function fetchResult(e){
     e.preventDefault();
-    name = username.value;
-    if (name == "") {
-        alert("please enter a username");
-        return;
-    }
-    console.log('start')
-    fetch(url, {
+    fetch(url,{
+        method: 'GET',
+        headers:{
+            'Accept': 'application/vnd.github.v3+json'
+        },
+    }).then(function(result) {
+        return result.json();
+    }).then(function(json) {
+        displayResults(json);
+    });
+    alert(JSON.stringify(result));
+}
+function displayResults(){
+
+}
+   /* fetch(url, {
         method: 'GET',
         headers: {
             'Accept': 'application/vnd.github.v3+json'
@@ -30,14 +35,12 @@ function fetchResults(e) {
     }).then((response)=>{
         response.json().then((d)=>{
             console.log(d)
-        })
-    });
-    console.log('end')
 }
-fetchResults(e);
 
 
-
-
-
-
+fetch(url).then(function(result) {
+  return result.json();
+}).then(function(json) {
+  displayResults(json);
+});
+*/
