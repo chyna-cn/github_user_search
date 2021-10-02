@@ -8,11 +8,11 @@ light.addEventListener('click', mode);
 let search = document.getElementById('search');
 let username = document.getElementById('search_bar');
 let name = username.value;
-let url = `https://api.github.com/users/?q=${name}`
+let section = document.querySelector('section');
 
 function fetchResult(e) {
     e.preventDefault();
-    fetch(url, {
+    fetch(`https://api.github.com/users?q=${name}`, {
         method: 'GET',
         headers: {
             'Accept': 'application/vnd.github.v3+json'
@@ -24,21 +24,15 @@ function fetchResult(e) {
     })
 
 }
-search.addEventListener('click', fetchResult);
-   /* fetch(url, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/vnd.github.v3+json'
-        },
-    }).then((response)=>{
-        response.json().then((d)=>{
-            console.log(d)
+function displayResult(res){
+    while (section.firstChild) {
+        section.removeChild(section.firstChild);
+    }
+
+    const{avatar_url,followers,following,html,login,url,repos} = res;
+    let img = document.createElement('img')
+    img.src = avatar_url;
+    section.appendChild(img);
+
 }
-
-
-fetch(url).then(function(result) {
-  return result.json();
-}).then(function(json) {
-  displayResults(json);
-});
-*/
+search.addEventListener('click', displayResult);
