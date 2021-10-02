@@ -7,11 +7,10 @@ light.addEventListener('click', mode);
 
 let search = document.getElementById('search');
 let username = document.getElementById('search_bar');
-let name = username.value;
 let section = document.querySelector('section');
-
 function fetchResult(e) {
     e.preventDefault();
+    let name = username.value;
     fetch(`https://api.github.com/users?q=${name}`, {
         method: 'GET',
         headers: {
@@ -21,18 +20,21 @@ function fetchResult(e) {
         return res.json();
     }).then(function (data){
         console.log(data);
+        displayResult(data);
     })
 
 }
-function displayResult(res){
-    while (section.firstChild) {
+function displayResult(data){
+   /* while (section.firstChild) {
         section.removeChild(section.firstChild);
-    }
+    }*/
 
-    const{avatar_url,followers,following,html,login,url,repos} = res;
+    const{avatar_url,followers,following,html,login,url,repos} = data;
     let img = document.createElement('img')
     img.src = avatar_url;
     section.appendChild(img);
-
+let h2 = document.createElement('h2');
+h2.textContent = login;
+section.appendChild(h2);
 }
-search.addEventListener('click', displayResult);
+search.addEventListener('click', fetchResult);
