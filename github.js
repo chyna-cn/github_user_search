@@ -24,17 +24,16 @@ function fetchResult(e) {
     })
 
 }
-function displayResult(data){
-   /* while (section.firstChild) {
-        section.removeChild(section.firstChild);
-    }*/
+function displayResult(data) {
+    for(let i=0; i<data.length; i++){
+        if(data[i] == name){
+            console.log(data[i]);
+            let img = document.createElement('img');
+            img.src = data[i].avatar_url;
+            section.appendChild(img);
 
-    const{avatar_url,followers,following,html,login,url,repos} = data;
-    let img = document.createElement('img')
-    img.src = avatar_url;
-    section.appendChild(img);
-let h2 = document.createElement('h2');
-h2.textContent = login;
-section.appendChild(h2);
+
+        }
+    }
 }
 search.addEventListener('click', fetchResult);
