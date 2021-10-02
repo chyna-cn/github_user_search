@@ -10,23 +10,21 @@ let username = document.getElementById('search_bar');
 let name = username.value;
 let url = `https://api.github.com/users/?q=${name}`
 
-function fetchResult(e){
+function fetchResult(e) {
     e.preventDefault();
-    fetch(url,{
+    fetch(url, {
         method: 'GET',
-        headers:{
+        headers: {
             'Accept': 'application/vnd.github.v3+json'
         },
-    }).then(function(result) {
-        return result.json();
-    }).then(function(json) {
-        displayResults(json);
-    });
-    alert(JSON.stringify(result));
-}
-function displayResults(){
+    }).then(function (res){
+        return res.json();
+    }).then(function (data){
+        console.log(data);
+    })
 
 }
+search.addEventListener('click', fetchResult);
    /* fetch(url, {
         method: 'GET',
         headers: {
