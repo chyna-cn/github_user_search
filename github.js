@@ -11,7 +11,7 @@ let section = document.querySelector('section');
 function fetchResult(e) {
     e.preventDefault();
     let name = username.value;
-    fetch(`https://api.github.com/users?q=${name}`, {
+    fetch(`https://api.github.com/search/users?q=${name}`, {
         method: 'GET',
         headers: {
             'Accept': 'application/vnd.github.v3+json'
@@ -25,15 +25,13 @@ function fetchResult(e) {
 
 }
 function displayResult(data) {
-    for(let i=0; i<data.length; i++){
-        if(data[i] == name){
-            console.log(data[i]);
-            let img = document.createElement('img');
-            img.src = data[i].avatar_url;
-            section.appendChild(img);
+const{avatar_url,login,followers_url, following_url, html_url,repos_url,url} = data
+    let p = document.createElement('p');
+p.textContent = login.items;
+section.appendChild(p);
 
 
-        }
-    }
+
+    
 }
 search.addEventListener('click', fetchResult);
