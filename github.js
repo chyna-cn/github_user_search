@@ -53,11 +53,13 @@ function displayResult(data) {
         url
     } = data
 
-    let head = document.createElement('div');
-    head.setAttribute('id', 'nameDate');
 
     let imgElement = document.createElement('img');
     imgElement.src = avatar_url;
+
+
+    let head = document.createElement('div');
+    head.setAttribute('id', 'nameDate');
 
     let p = document.createElement('p');
     p.setAttribute('id', 'login')
@@ -66,11 +68,11 @@ function displayResult(data) {
 
     let span = document.createElement('span');
     span.setAttribute('id', 'created_at')
-    span.textContent = created_at;
+    span.textContent = `joined ${created_at}`;
 
     head.appendChild(p);
     head.appendChild(span);
-    head.appendChild(imgElement);
+
 
     let bioDeets = document.createElement('p');
     bioDeets.setAttribute('id', 'bio');
@@ -80,6 +82,10 @@ function displayResult(data) {
     else {
         bioDeets.textContent = bio;
     }
+
+    let midBox = document.createElement('div');
+    midBox.setAttribute('id', 'midBox');
+
 
     let div = document.createElement('div');
     div.setAttribute('id', 'userCounts');
@@ -120,11 +126,14 @@ function displayResult(data) {
     divVal.appendChild(followerValue);
     divVal.appendChild(followingValue);
 
+    midBox.appendChild(div);
+    midBox.appendChild(divVal)
+
     let bottom1 = document.createElement('div');
     bottom1.setAttribute('id', 'top');
 
     let span1 = document.createElement('span');
-    span1.setAttribute('class', 'topClass');
+    span1.setAttribute('id', 'topClass1');
     if(location==null){
         span1.textContent = 'not available';
     }
@@ -133,7 +142,7 @@ function displayResult(data) {
     }
 
    let span2 = document.createElement('span');
-    span2.setAttribute('class', 'topClass');
+    span2.setAttribute('id', 'topClass2');
     if(twitter_username==null){
         span2.textContent = 'not available';
     }
@@ -149,33 +158,27 @@ function displayResult(data) {
     bottom2.setAttribute('id', 'bottom');
 
     let span3 = document.createElement('span');
-    span3.setAttribute('class', 'bottomClass');
+    span3.setAttribute('id', 'bottomClass1');
     if(blog==""){
-        span3.textContent = 'not available';
+        span3.textContent ='not available';
     }
     else {
         span3.textContent = blog;
     }
 
     let span4 = document.createElement('span');
-    span4.setAttribute('class', 'bottomClass');
+    span4.setAttribute('id', 'bottomClass2');
     span4.textContent = url;
 
     bottom2.appendChild(span3);
     bottom2.appendChild(span4);
 
-
+    section.appendChild(imgElement);
     section.appendChild(head);
     section.appendChild(bioDeets);
-    section.appendChild(div);
-    section.appendChild(divVal);
+    section.appendChild(midBox);
     section.appendChild(bottom1);
     section.appendChild(bottom2);
-
-
-
-
 }
-
 
 search.addEventListener('click', fetchResult);
