@@ -58,6 +58,10 @@ function displayResult(data) {
     imgElement.src = avatar_url;
 
 
+    const icon = document.createElement('i')
+    icon.setAttribute('class', 'fab fa-accessible-icon')
+    icon.setAttribute('style', 'font-size: 3rem')
+
     let head = document.createElement('div');
     head.setAttribute('id', 'nameDate');
 
@@ -128,6 +132,8 @@ function displayResult(data) {
 
     midBox.appendChild(div);
     midBox.appendChild(divVal)
+
+    midBox.appendChild(icon)
 
     let bottom1 = document.createElement('div');
     bottom1.setAttribute('id', 'top');
